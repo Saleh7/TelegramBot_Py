@@ -23,16 +23,15 @@ def getUpdates(offset=None, limit=None, timeout=None):
         'limit': limit,
         'timeout': timeout
     }
-    #return requests.get(url + 'getUpdates', params=Params)
     return json.loads(requests.get(url + 'getUpdates', params=Params).content.decode('utf8'))
 
 """
 :param integer  chat_id
 :param string   text
-:param boolean  disable_web_page_preview | true,false
-:param integer|null  reply_to_message_id
+:param boolean  disable_web | true,false
+:param integer|None  reply_t
+:param ReplyKeyboard  reply_markup
 :tutorial https://core.telegram.org/bots/api#sendmessage
-Optional. For text messages, the actual UTF-8 text of the message
 """
 def SendMessage(chat_id, text, disable_web=None, reply_t=None, reply_markup=None,):
     Params = {
