@@ -33,7 +33,7 @@ def getUpdates(offset=None, limit=None, timeout=None):
 :param ReplyKeyboard  reply_markup
 :tutorial https://core.telegram.org/bots/api#sendmessage
 """
-def SendMessage(chat_id, text, disable_web=None, reply_t=None, reply_markup=None,):
+def SendMessage(chat_id, text, disable_web=None, reply_t=None, reply_markup=None):
     Params = {
         'chat_id': chat_id,
         'text': text,
